@@ -2,6 +2,7 @@ from flask import Flask, request, render_template
 from flask_cors import cross_origin
 import pickle
 import pandas as pd
+import streamlit as st
 
 # Load the trained model
 model = pickle.load(open('Trained_Model.pkl', 'rb'))
@@ -93,5 +94,8 @@ def predict():
     except Exception as e:
         return render_template('Screen.html', predictions=f"Error: {str(e)}")
 
-if __name__ == '__main__':
-    app.run(debug=True)
+if st.button("Run Flask"):
+    st.write("Flask app running on a separate server!")
+    
+# if __name__ == '__main__':
+#     app.run(debug=True)
