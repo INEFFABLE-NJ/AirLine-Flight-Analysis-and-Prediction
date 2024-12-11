@@ -44,6 +44,3 @@ The application predicts flight prices based on user-provided inputs and display
 
 See the `requirements.txt` file for a complete list of dependencies.
 
-## License
-
-This project is licensed under the MIT License.
